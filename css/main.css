@@ -1,23 +1,27 @@
 div  {
     float: top;
-    width: 400px;
-    height: 200px;
+    width: 40%;
+    height: 20%;
     text-align: center;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 div > header {
-    font-size: large;
+    font-size: medium;
     font-style: initial;
     height: 15%;
+    padding: 1%;
 }
 div > section {
     font-size: 15px;
     height: 70%;
-    margin: 4px;
     text-align: justify;
+    padding: 1%;
+
 }
 div > footer {
     font-size: 10px;
     height: 15%;
+    padding: 1%;
+
 }
 
