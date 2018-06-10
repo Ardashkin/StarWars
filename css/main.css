@@ -1,0 +1,23 @@
+div  {
+    float: top;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid black;
+}
+div > header {
+    font-size: large;
+    font-style: initial;
+    height: 15%;
+}
+div > section {
+    font-size: 15px;
+    height: 70%;
+    margin: 4px;
+    text-align: justify;
+}
+div > footer {
+    font-size: 10px;
+    height: 15%;
+}
+
