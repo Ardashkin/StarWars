@@ -4,18 +4,13 @@ var GetInfo = (function () {
 
     function GetInfo() {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://swapi.co/api/', false);
+        xhr.open('GET', 'https://swapi.co/api/films/', false);
         xhr.send();
 
         if (xhr.status != 200) console.log(xhr.status + ': ' + xhr.statusText);
         else console.log(xhr.response);
 
-        var a = JSON.parse(xhr.response);
-        var xhr2 = new XMLHttpRequest();
-        xhr2.open('GET', a.films, false);
-        xhr2.send();
-
-        var films = JSON.parse(xhr2.response);
+        var films = JSON.parse(xhr.response);
 
         for (var i = 0; i < films.results.length; i++) {
             document.body.appendChild(Render(
@@ -26,6 +21,7 @@ var GetInfo = (function () {
                 films.results[i].edited.split('T')[0]
             ));
         }
+        console.log(films.results);
     }
 
     function Render(episode_id, title, opening_crawl, director, edited) {
@@ -41,6 +37,11 @@ var GetInfo = (function () {
         div.appendChild(header);
         div.appendChild(section);
         div.appendChild(footer);
+
+        div.onclick = function (event) {
+        alert("Тут выводить кто играет");
+
+        };
 
         return div;
     }

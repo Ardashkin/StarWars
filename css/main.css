@@ -1,6 +1,6 @@
 div  {
     float: top;
-    width: 40%;
+    width: 50%;
     height: 20%;
     text-align: center;
     border: 1px solid black;
@@ -16,12 +16,10 @@ div > section {
     height: 70%;
     text-align: justify;
     padding: 1%;
-
 }
 div > footer {
     font-size: 10px;
     height: 15%;
     padding: 1%;
-
 }
 
